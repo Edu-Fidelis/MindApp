@@ -1,0 +1,32 @@
+<% if content.error.any?%>
+    Errors: <%= content.errors.full_messages.join(', ')%>
+    <br>
+    <br>
+<% end %>
+
+<%= form_with(model: content, local: true) do |form| %>
+    <div class='form_group'>
+        <%= form.label :title%>
+        <%= form.text_text_field :title, class: 'form-control' %>
+    </div>
+
+    <div class='form_group'>
+        <%= form.label :description%>
+        <%= form.text_area :description, class: 'form-control' %>
+    </div>
+
+    <div class='form_group'>
+        <%= form.label :tags%>
+        <%= form.select :tags, options_for_select(current_user.tags.pluck(:name), contents.tags.pluck(:name) ), { }, { class: 'select2', multiple: 'multiple' }, class: 'form-control' %>
+    </div>
+
+    <%# <select class="select2 form-control" multiple="multiple", style='width: 50%'>
+    <option selected="selected">orange</option>
+    <option>white</option>
+    <option selected="selected">purple</option>
+    </select> %>
+
+    <div class='actions'>
+     <% form.submit 'Save', class: 'btn btn-primary' %>
+    </div>
+<% end %>

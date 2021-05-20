@@ -1,2 +1,24 @@
-# MindApp
-Desenvolvendo uma Cloud Tags com Ruby, cloud tags sobre assuntos já estudados, com o tamanho de acordo com o nível de proficiência em determinado assunto 
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
